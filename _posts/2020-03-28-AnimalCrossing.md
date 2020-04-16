@@ -3,12 +3,7 @@ layout:		single
 title: 모여봐요 동물의 숲
 comments: true
 date:	2020-03-28 12:20:19 +0900
-<<<<<<< HEAD
 categories: [Games]
-
-=======
-categories: [categories/Games]
->>>>>>> bb4fcffed63ac4f74eb5d837383f228b4acf5e56
 ---
 
 
