@@ -1,6 +1,6 @@
 ---
 layout: category
 title: Review
-permalink: categories/Review
+permalink: categories/review
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: category
 title: Games
-permalink: categories/Games
+permalink: categories/games
 ---
 
