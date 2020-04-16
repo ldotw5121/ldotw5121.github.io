@@ -1,0 +1,763 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Java - ldotw’s blog</title>
+<meta name="description" content="JDK 1.0a  ">
+
+
+  <meta name="author" content="ldotw">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="ldotw's blog">
+<meta property="og:title" content="Java">
+<meta property="og:url" content="http://localhost:4000/assignment/java/">
+
+
+  <meta property="og:description" content="JDK 1.0a  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-03-31T18:50:22+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/assignment/java/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ldotw",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="ldotw's blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+    
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          ldotw's blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/assignment/">Assignment</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/games/">Games</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/review/">Review</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/etc/">ETC</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ldotw</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>INU Sophomore</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Java">
+    <meta itemprop="description" content="JDK 1.0a">
+    <meta itemprop="datePublished" content="2020-03-31T18:50:22+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Java
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="jdk-10a"><strong>JDK 1.0a</strong></h1>
+
+<hr />
+
+<p>1994년 발표.</p>
+
+<h1 id="jdk10a2"><strong>JDK1.0a2</strong></h1>
+
+<hr />
+
+<p>1995년 5월 23일 발표.</p>
+
+<h1 id="jdk-10"><strong>JDK 1.0</strong></h1>
+
+<hr />
+
+<p>1996년 1월 23일 발표.</p>
+
+<p>발표 이전에 불렸던 이름은 Oak였으며, 안정화 작업을 거친 1.0.2 버전에서 Java로 이름이 바뀌었다.</p>
+
+<h1 id="jdk-11"><strong>JDK 1.1</strong></h1>
+
+<hr />
+
+<p>1997년 2월 19일 발표.</p>
+
+<p>이너 클래스, JavaBeans, RMI, 리플렉션, 유니코드 지원, 국제화(Internationalization) 등이 추가되었다.</p>
+
+<h1 id="j2se-12"><strong>J2SE 1.2</strong></h1>
+
+<hr />
+
+<p>1998년 12월 8일 발표.</p>
+
+<p>일반 지원은 2003년 11월에 종료되었다. 새로운 GUI, JIT, CORBA 등의 굵직한 기능이 추가되면서 2 부터 약칭을 J2SE(Java 2 Standard Edition) 로 표기하기 시작했다.</p>
+
+<p>strictfp, Swing GUI, JIT, Java Applet을 구동하는 웹 브라우저 플러그인, CORBA, Collections 등이 추가되었다.</p>
+
+<h1 id="j2se13"><strong>J2SE1.3</strong></h1>
+
+<hr />
+
+<p>2000년 3월 8일 발표.</p>
+
+<p>HotSpot JVM, JNDI, JPDA, JavaSound 등이 추가되었다. RMI가 CORBA를 지원하도록 변경되었다.</p>
+
+<h1 id="j2se-14"><strong>J2SE 1.4</strong></h1>
+
+<hr />
+
+<p>2002년 2월 6일 발표.</p>
+
+<p>assert, 정규표현식, IPv6, Non-Blocking IO, XML API, JCE, JSSE, JAAS, Java Web Start 등이 추가되었다.</p>
+
+<h1 id="j2se-5"><strong>J2SE 5</strong></h1>
+
+<hr />
+
+<p>2004년 9월 30일 발표.</p>
+
+<p>버전 표기가 바뀌었다.</p>
+
+<p>Generics, Annotation, Auto Boxing/Unboxing, Enumeration, 가변 길이 파라미터, Static Import, 새로운 Concurrency API 등이 추가되었다.</p>
+
+<p>java.util.Scanner가 추가되면서 이전보다 편하게 표준 입력을 사용할 수 있게 되었다.</p>
+
+<h1 id="java-se-6"><strong>Java SE 6</strong></h1>
+
+<hr />
+
+<p>2006년 12월 11일 발표.</p>
+
+<p>표기가 J2SE에서 Java SE로 바뀌었다. Scripting Language Support, JDBC 4.0, Java Compiler API, Pluggable Annotation 등이 추가되었다.</p>
+
+<p>스크립팅 언어 지원과 함께 Rhino JavaScript엔진이 기본으로 탑재되었다.</p>
+
+<h1 id="java-se-7"><strong>Java SE 7</strong></h1>
+
+<hr />
+
+<p>2011년 7월 7일 발표.</p>
+
+<p>Dynamic Language 지원, switch문에서 String 사용, try문에서 자동 자원 관리, Diamond Operator &lt;&gt;, 이진수 리터럴, 숫자 리터럴에 _ 지원, 새로운 Concurrency API, 새로운 File NIO 라이브러리, Elliptic Curve Cryptography, Java2D를 위한 XRender, Upstream, Java Deployment Ruleset 등이 추가되었다.</p>
+
+<h1 id="java-se-8"><strong>Java SE 8</strong></h1>
+
+<hr />
+
+<p>2014년 3월 18일 발표.</p>
+
+<p>Lambda Expression, Rhino 대신 Nashorn JavaScript 엔진 탑재, Annotation on Java Types, Unsigned Integer 계산, Repeating Annotation, 새로운 날짜와 시간 API, Static Link JNI Library, Interface Default Method, PermGen 영역 삭제, Stream API 등이 추가되었다.</p>
+
+<p>32비트를 지원하는 마지막 공식 Java 버전으로, 이후 버전의 32비트 지원은 오직 서드파티를 통해서만 지원된다.</p>
+
+<h1 id="java-se-9"><strong>Java SE 9</strong></h1>
+
+<hr />
+
+<p>2017년 9월 21일 발표.</p>
+
+<p>Project Jigsaw 기반으로 런타임이 모듈화된 것이 가장 큰 특징. 이에 따라 대부분의 콘솔 프로그램 개발에는 더 이상 AWT나 Swing 같은 불필요한 라이브러리를 끌어쓸 필요도 없이, 최상위 모듈인 Base만 사용해도 된다. 더불어 특정 프로그램에 최적화된 최소 런타임을 제작할 수 있게 되면서 패키징 역시 간편해졌다.</p>
+
+<p>여기에 Java를 인터프리터 언어 셸처럼 사용할 수 있는 JShell이 추가되었으며, Java 바이트코드를 기계어로 미리 번역하는 선행 컴파일(Ahead-Of-Time Compilation) 역시 실험 기능으로 추가되었다.</p>
+
+<p>또한 Deprecated 표시에는 해당 버전과 제거 예정 여부를 표시할 수 있게 되었다. 그 외에 구조적 불변 컬렉션, 통합 로깅, HTTP/2, private 인터페이스 메소드, HTML5 Javadoc 등도 지원되며, 프로퍼티 파일에 UTF-8이 지원된다.</p>
+
+<p>이 버전부터 64비트 버전만 출시되었으며, 32비트 버전은 더 이상 공식적으로 나오지 않는다.</p>
+
+<h1 id="java-se-10"><strong>Java SE 10</strong></h1>
+
+<hr />
+
+<p>2018년 3월 20일 발표.</p>
+
+<p>var 키워드를 이용한 지역 변수 타입 추론, 병렬 처리 가비지 컬렉션, 개별 쓰레드로 분리된 Stop-The-World, 루트 CA 목록 등이 추가되었다. 또한 JDK의 레포지토리가 하나로 통합되었으며, JVM 힙 영역을 시스템 메모리가 아닌 다른 종류의 메모리에도 할당할 수 있게 되었다.</p>
+
+<p>실험 기능으로 Java 기반의 JIT 컴파일러가 추가되었고, 이전 버전에서 Deprecated 처리된 API는 Java SE 10에서 모두 삭제되었다.</p>
+
+<h1 id="java-se-11"><strong>Java SE 11</strong></h1>
+
+<hr />
+
+<p>2018년 9월 25일 발표.</p>
+
+<p>이클립스재단으로 넘어간 Java EE가 JDK에서 삭제되고, JavaFX도 JDK에서 분리되어 별도의 모듈로 제공된다. 람다 파라미터에 대한 지역 변수 문법, 엡실론 가비지 컬렉터, HTTP 클라이언트 표준화 등의 기능이 추가되었다.</p>
+
+<p>Java SE 11부터 Oracle JDK의 독점 기능이 오픈 소스버전인 OpenJDK에 이식된다. 이는 다시 말해 Oracle JDK와 OpenJDK가 완전히 동일해진다는 뜻이다. Oracle JDK는 Java SE 11부터 LTS버전으로 3년마다 출시되는데, 출시 후 5년 동안 오라클의 기술 지원이 제공되고 최대 3년까지 지원 기간을 연장할 수 있다. Oracle JDK는 이제 3년에 한 번 출시되니 Java의 실질적인 버전 업을 담당하는 것은 OpenJDK가 된 셈이다. OpenJDK는 기업들을 위한 기술 지원은 없고, 새로운 버전이 나오면 이전 버전에 대한 마이너 업데이트와 보안 업데이트는 중단된다.</p>
+
+<p>그리고 Java 11과 함께 발표된 또 다른 소식은 바로  Oracle JDK가 구독형 유료 모델로 전환된다는 점이다.</p>
+
+<p>2019년 1월부터 오라클이 제공하는 모든 Oracle JDK는 유료화되며, 구독권을 구입하지 않으면 Oracle JDK에 접근 자체가 금지된다. 기존의 일반/연장 지원 서비스는 구독권에 포함되므로 별도의 서비스로는 제공되지 않는다. 개인 사용자는 2021년 1월부터 비용을 지불해야 한다.</p>
+
+<h1 id="java-se-12"><strong>Java SE 12</strong></h1>
+
+<hr />
+
+<p>2019년 3월 19일 공개. 특징 중 하나로 문법적으로 Switch문을 확장한 것이 있다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="o">(</span><span class="n">day</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nl">MONDAY:</span>
+    <span class="k">case</span> <span class="nl">FRIDAY:</span>
+    <span class="k">case</span> <span class="nl">SUNDAY:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="nl">TUESDAY:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">7</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="nl">THURSDAY:</span>
+    <span class="k">case</span> <span class="nl">SATURDAY:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">8</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="nl">WEDNESDAY:</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">9</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>예전에는 이렇게 써야 했던 Switch문을 아래와 같은 형식으로도 쓸 수 있게 되었다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="o">(</span><span class="n">day</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="no">MONDAY</span><span class="o">,</span> <span class="no">FRIDAY</span><span class="o">,</span> <span class="no">SUNDAY</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
+    <span class="k">case</span> <span class="no">TUESDAY</span>                <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">7</span><span class="o">);</span>
+    <span class="k">case</span> <span class="no">THURSDAY</span><span class="o">,</span> <span class="no">SATURDAY</span>     <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">8</span><span class="o">);</span>
+    <span class="k">case</span> <span class="no">WEDNESDAY</span>              <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">9</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>이외에 가비지 컬렉터 개선, 마이크로 벤치마크 툴 추가, 성능 개선의 변경점이 있다.</p>
+
+<h1 id="java-se-13"><strong>Java SE 13</strong></h1>
+
+<hr />
+
+<p>2019년 9월 17일 공개. java 12에서의 스위치 개선을 이어 yield 라는 예약어가 추가되었다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">a</span> <span class="o">=</span> <span class="k">switch</span> <span class="o">(</span><span class="n">day</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="no">MONDAY</span><span class="o">,</span> <span class="no">FRIDAY</span><span class="o">,</span> <span class="no">SUNDAY</span> <span class="o">-&gt;</span> <span class="n">yield</span> <span class="mi">6</span><span class="o">;</span>
+    <span class="k">case</span> <span class="no">TUESDAY</span>                <span class="o">-&gt;</span> <span class="n">yield</span> <span class="mi">7</span><span class="o">;</span>
+    <span class="k">case</span> <span class="no">THURSDAY</span><span class="o">,</span> <span class="no">SATURDAY</span>     <span class="o">-&gt;</span> <span class="n">yield</span> <span class="mi">8</span><span class="o">;</span>
+    <span class="k">case</span> <span class="no">WEDNESDAY</span>              <span class="o">-&gt;</span> <span class="n">yield</span> <span class="mi">9</span><span class="o">;</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h1 id="java-se-14"><strong>Java SE 14</strong></h1>
+
+<hr />
+
+<p>2020년 3월 18일 공개.</p>
+
+<p>instance of 연산자의 패턴 매칭을 통해 간결한 코드 설명을 가능하게 하는 ‘JEP 305: Pattern Matching for instance of(Preview)’와 자기 완결형 자바 어플리케이션을 패키지화 하는 JEP 343: Packaging Tool(Incubator), NUMA(Non-Uniform Memory Access), 시스템의 메모리 어로케이션 구현으로 G1 퍼포먼스를 향상시키는 JEP 345: NUMA-Aware Memory Allocation for G1 등이 더해졌다.</p>
+
+<h1 id="java-se-15"><strong>Java SE 15</strong></h1>
+
+<hr />
+
+<p>2020년 9월 공개 예정.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#assignment" class="page__taxonomy-item" rel="tag">Assignment</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-03-31T18:50:22+09:00">March 31, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Java%20http%3A%2F%2Flocalhost%3A4000%2Fassignment%2Fjava%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fassignment%2Fjava%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fassignment%2Fjava%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/games/AnimalCrossing/" class="pagination--pager" title="모여봐요 동물의 숲
+">Previous</a>
+    
+    
+      <a href="/assignment/strassen/" class="pagination--pager" title="슈트라센 알고리즘
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/etc/Banana/" rel="permalink">Banana
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/etc/welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/assignment/Greedy/" rel="permalink">그리디 알고리즘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">그리디 알고리즘
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/assignment/strassen/" rel="permalink">슈트라센 알고리즘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">슈트라센 알고리즘
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 ldotw. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

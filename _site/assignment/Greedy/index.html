@@ -1,0 +1,793 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>그리디 알고리즘 - ldotw’s blog</title>
+<meta name="description" content="그리디 알고리즘  ">
+
+
+  <meta name="author" content="ldotw">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="ldotw's blog">
+<meta property="og:title" content="그리디 알고리즘">
+<meta property="og:url" content="http://localhost:4000/assignment/Greedy/">
+
+
+  <meta property="og:description" content="그리디 알고리즘  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-04-15T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/assignment/Greedy/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ldotw",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="ldotw's blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+    
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          ldotw's blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/assignment/">Assignment</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/games/">Games</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/review/">Review</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/etc/">ETC</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ldotw</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>INU Sophomore</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="그리디 알고리즘">
+    <meta itemprop="description" content="그리디 알고리즘">
+    <meta itemprop="datePublished" content="2020-04-15T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">그리디 알고리즘
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="그리디-알고리즘">그리디 알고리즘</h1>
+
+<hr />
+
+<p>그리디 알고리즘에 관한 설명은 <a href="[https://namu.wiki/w/%EA%B7%B8%EB%A6%AC%EB%94%94%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98](https://namu.wiki/w/그리디 알고리즘)">여기</a>에서 확인할 수 있다.</p>
+
+<p>교재에 나와있는 문제로는</p>
+
+<ol>
+  <li>동전 거스름돈</li>
+  <li>최소 신장 트리</li>
+  <li>최단 경로 찾기</li>
+  <li>부분 배낭 문제</li>
+  <li>집합 커버 문제</li>
+  <li>작업 스케줄링</li>
+  <li>하프만 압축</li>
+</ol>
+
+<p>총 7가지 문제가 수록되어있다.</p>
+
+<p>나는 이 그리디 알고리즘을 활용할 수 있는 <a href="https://www.acmicpc.net/problem/11399">문제</a>를 백준에서 찾을 수 있었다.</p>
+
+<h1 id="atm">ATM</h1>
+
+<hr />
+
+<p><strong>문제</strong></p>
+
+<p>인하은행에는 ATM이 1대밖에 없다. 지금 이 ATM앞에 N명의 사람들이 줄을 서있다. 사람은 1번부터 N번까지 번호가 매겨져 있으며, i번 사람이 돈을 인출하는데 걸리는 시간은 Pi분이다.</p>
+
+<p>사람들이 줄을 서는 순서에 따라서, 돈을 인출하는데 필요한 시간의 합이 달라지게 된다. 예를 들어, 총 5명이 있고, P1 = 3, P2 = 1, P3 = 4, P4 = 3, P5 = 2 인 경우를 생각해보자. [1, 2, 3, 4, 5] 순서로 줄을 선다면, 1번 사람은 3분만에 돈을 뽑을 수 있다. 2번 사람은 1번 사람이 돈을 뽑을 때 까지 기다려야 하기 때문에, 3+1 = 4분이 걸리게 된다. 3번 사람은 1번, 2번 사람이 돈을 뽑을 때까지 기다려야 하기 때문에, 총 3+1+4 = 8분이 필요하게 된다. 4번 사람은 3+1+4+3 = 11분, 5번 사람은 3+1+4+3+2 = 13분이 걸리게 된다. 이 경우에 각 사람이 돈을 인출하는데 필요한 시간의 합은 3+4+8+11+13 = 39분이 된다.</p>
+
+<p>줄을 [2, 5, 1, 4, 3] 순서로 줄을 서면, 2번 사람은 1분만에, 5번 사람은 1+2 = 3분, 1번 사람은 1+2+3 = 6분, 4번 사람은 1+2+3+3 = 9분, 3번 사람은 1+2+3+3+4 = 13분이 걸리게 된다. 각 사람이 돈을 인출하는데 필요한 시간의 합은 1+3+6+9+13 = 32분이다. 이 방법보다 더 필요한 시간의 합을 최소로 만들 수는 없다.</p>
+
+<p>줄을 서 있는 사람의 수 N과 각 사람이 돈을 인출하는데 걸리는 시간 Pi가 주어졌을 때, 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 구하는 프로그램을 작성하시오.</p>
+
+<p><strong>입력</strong></p>
+
+<p>첫째 줄에 사람의 수 N(1 ≤ N ≤ 1,000)이 주어진다. 둘째 줄에는 각 사람이 돈을 인출하는데 걸리는 시간 Pi가 주어진다. (1 ≤ Pi ≤ 1,000)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5
+3 1 4 3 2
+</code></pre></div></div>
+
+<p><strong>출력</strong></p>
+
+<p>첫째 줄에 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 출력한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>32
+</code></pre></div></div>
+
+<h1 id="atm-문제-접근">ATM 문제 접근</h1>
+
+<hr />
+
+<p>각 사람이 돈을 인출하는 데에 필요한 시간의 합의 최솟값을 구하는 문제이다.</p>
+
+<p>예제를 통해 한 번 확인해보자. 5명이 저 순서로 돈을 인출하게 된다면,</p>
+
+<p>첫 번째 사람은 3분</p>
+
+<p>두 번째 사람은 1분</p>
+
+<p>세 번째 사람은 4분</p>
+
+<p>네 번째 사람은 3분</p>
+
+<p>다섯 번째 사람은 2분을 자기 차례에 소모한다.</p>
+
+<p>그러므로 다섯 번째 사람은 저 모든 시간을 견뎌야 드디어 돈을 뽑을 수 있게 되는 것이다.</p>
+
+<p>즉,</p>
+
+<p>첫 번째 사람은 3분</p>
+
+<p>두 번째 사람은 3분+1분 = 4분</p>
+
+<p>세 번째 사람은 4분+4분 = 8분</p>
+
+<p>네 번째 사람은 8분+3분 = 11분</p>
+
+<p>다섯 번째 사람은 11분+2분 = 13분이 인출하는 데 소요되는 시간이다.</p>
+
+<p>그러므로 총 소요 시간은 3+4+8+11+13 = 39분이다.</p>
+
+<p>이걸 일반화 하게 되면</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i번째 사람이 인출하는 데에 소요되는 시간 += i-1번째 사람이 인출하는 데에 소요되는 시간
+</code></pre></div></div>
+
+<p>이므로, 시간이 더 적게 소요되는 사람부터 해결을 하는 것의 합이 곧 최솟값임을 알 수 있다.</p>
+
+<h1 id="atm-문제-with-c">ATM 문제 with C#</h1>
+
+<hr />
+
+<p>먼저 입력을 생각해보자.</p>
+
+<p>C#에서는 입력을 string으로 받기 때문에 변환 과정이 필요하다.</p>
+
+<p>그리고 띄어쓰기 입력도 C나 C++에서는 (“%d %d”)로 받을 수 있는 반면에 C#에서는 문자열로 받은 후 Split()함수로 나눠서 배열에 저장을 해야만 하는 것이 좀 까다롭다.</p>
+
+<p>사람 수를 input이라고 하고 걸리는 시간을 time이라고 하면, 다음과 같이 입력할 수 있다.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">alg</span><span class="p">{</span>
+	<span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">input</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">());</span>
+        <span class="kt">int</span><span class="p">[]</span> <span class="n">time</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">input</span><span class="p">];</span>
+        <span class="kt">string</span><span class="p">[]</span> <span class="n">tmp</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">input</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+        <span class="p">{</span>
+            <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이제 저 시간을 오름차순으로 정렬해줄 것이다.</p>
+
+<p>여러 정렬 중에서 제일 친숙하고 느려터진 버블정렬을 활용해보자.</p>
+
+<p>time이 int형 배열이므로 인자를 int형 배열로 받도록 한다.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Sort</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">arr</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span><span class="p">[]</span> <span class="n">num</span> <span class="p">=</span> <span class="n">arr</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">num</span><span class="p">.</span><span class="n">Length</span> <span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">num</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="n">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">&gt;</span> <span class="n">num</span><span class="p">[</span><span class="n">j</span> <span class="p">+</span> <span class="m">1</span><span class="p">])</span>
+                    <span class="p">{</span>
+                        <span class="n">tmp</span> <span class="p">=</span> <span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                        <span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">=</span> <span class="n">num</span><span class="p">[</span><span class="n">j</span> <span class="p">+</span> <span class="m">1</span><span class="p">];</span>
+                        <span class="n">num</span><span class="p">[</span><span class="n">j</span> <span class="p">+</span> <span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="n">tmp</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</code></pre></div></div>
+
+<p>이제 합을 내는 부분이다.</p>
+
+<p>각 시간을 더하는 변수와 결과값을 0으로 선언해준다.</p>
+
+<p>그 후 계산을 하게 되면</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code>			<span class="kt">int</span> <span class="n">res</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">input</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">sum</span> <span class="p">+=</span> <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                <span class="n">res</span> <span class="p">+=</span> <span class="n">sum</span><span class="p">;</span>
+            <span class="p">}</span>
+</code></pre></div></div>
+
+<p>이제 결과값을 출력해준다.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">res</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>이하는 코드 전체이다.</p>
+
+<div class="language-c# highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Greedy</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">input</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">());</span>
+            <span class="kt">int</span><span class="p">[]</span> <span class="n">time</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">input</span><span class="p">];</span>
+            <span class="kt">string</span><span class="p">[]</span> <span class="n">tmp</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">().</span><span class="nf">Split</span><span class="p">();</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">input</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="p">}</span>
+
+
+            <span class="nf">Sort</span><span class="p">(</span><span class="n">time</span><span class="p">);</span>
+
+            
+
+            <span class="kt">int</span> <span class="n">res</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">sum</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">=</span><span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">input</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">sum</span> <span class="p">+=</span> <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                <span class="n">res</span> <span class="p">+=</span> <span class="n">sum</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">res</span><span class="p">);</span>
+            
+
+
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Sort</span><span class="p">(</span><span class="kt">int</span><span class="p">[]</span> <span class="n">arr</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span><span class="p">[]</span> <span class="n">num</span> <span class="p">=</span> <span class="n">arr</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">num</span><span class="p">.</span><span class="n">Length</span> <span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;</span> <span class="n">num</span><span class="p">.</span><span class="n">Length</span> <span class="p">-</span> <span class="n">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+                <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">&gt;</span> <span class="n">num</span><span class="p">[</span><span class="n">j</span> <span class="p">+</span> <span class="m">1</span><span class="p">])</span>
+                    <span class="p">{</span>
+                        <span class="n">tmp</span> <span class="p">=</span> <span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+                        <span class="n">num</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">=</span> <span class="n">num</span><span class="p">[</span><span class="n">j</span> <span class="p">+</span> <span class="m">1</span><span class="p">];</span>
+                        <span class="n">num</span><span class="p">[</span><span class="n">j</span> <span class="p">+</span> <span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="n">tmp</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#assignment" class="page__taxonomy-item" rel="tag">Assignment</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-04-15T00:00:00+09:00">April 15, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EA%B7%B8%EB%A6%AC%EB%94%94+%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20http%3A%2F%2Flocalhost%3A4000%2Fassignment%2FGreedy%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fassignment%2FGreedy%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fassignment%2FGreedy%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/assignment/strassen/" class="pagination--pager" title="슈트라센 알고리즘
+">Previous</a>
+    
+    
+      <a href="/etc/welcome-to-jekyll/" class="pagination--pager" title="Welcome to Jekyll!
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/etc/Banana/" rel="permalink">Banana
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/etc/welcome-to-jekyll/" rel="permalink">Welcome to Jekyll!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/assignment/strassen/" rel="permalink">슈트라센 알고리즘
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">슈트라센 알고리즘
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/assignment/java/" rel="permalink">Java
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">JDK 1.0a
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 ldotw. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
