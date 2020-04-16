@@ -1,13 +1,13 @@
 # main links
 main:
   - title: "Assignment"
-    url: /categories/Assignment/
+    url: /categories/assignment/
   - title: "Games"
-    url: /categories/Games/
+    url: /categories/games/
   - title: "Review"
-    url: /categories/Review/
+    url: /categories/review/
   - title: "ETC"
-    url: /categories/ETC/
+    url: /categories/etc/
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
