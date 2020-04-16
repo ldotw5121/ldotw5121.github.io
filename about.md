@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ldotw's TMI
-permalink: /about/ldotw' TMI
+permalink: /about/
 ---
 
 ---
