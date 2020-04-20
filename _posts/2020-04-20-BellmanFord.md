@@ -3,7 +3,7 @@ layout: single
 title: 벨만-포드 알고리즘
 categories: [Assignment]
 use_math: true
-comment: true
+comments: true
 ---
 
 # **개요**
