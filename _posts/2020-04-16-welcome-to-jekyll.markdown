@@ -4,26 +4,122 @@ title:  "Welcome to Jekyll!"
 date:   2020-04-16 01:31:35 +0900
 categories: [ETC]
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# 3주차 스택   201701721 황병화
 
-Jekyll requires blog post files to be named according to the following format:
+1. **소스코드**
 
-`YEAR-MONTH-DAY-title.MARKUP`
+   ```c
+   #include <stdio.h>
+   #include <stdlib.h>
+   #define MAX 8
+   
+   typedef int element;
+   typedef struct{
+   	element data[MAX];
+   	int top;
+   }stack;
+   
+   void initStack(stack* s) {
+   	s->top = -1;
+   }
+   
+   int isFull(stack* s) {
+   	return (s->top == (MAX - 1));
+   }
+   
+   
+   void push(stack* s, element item) {
+   	if (isFull(s)) {
+   		printf("");
+   		return;
+   	}
+   	else s->data[++(s->top)] = item;
+   }
+   
+   
+   int main() {
+   	stack s;
+   
+   	int teemo = 1;
+   	int soraka = 1;
+   	int ashe = 1;
+   	int kassadin = 1;
+   	int lillia = 1;
+   	int mejai;
+   	
+   	
+   
+   	initStack(&s);
+   
+   	mejai = s.top + 1;
+   	mejai++;
+   	
+   	push(&s, soraka);
+   	printf("선취점                     메사이의 영혼약탈자 %d 스택 \n", mejai);
+   	mejai++;
+   	push(&s, ashe);
+   	
+   	printf("더블킬                     메사이의 영혼약탈자 %d 스택 \n", mejai);
+   	
+   	mejai = s.top / 2 + 1;
+   
+   	printf("적에게 당했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, teemo);
+   	printf("적을 처치했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, lillia);
+   	printf("적을 처치했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, kassadin);
+   	printf("학살중입니다               메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai = s.top / 2 ;
+   	printf("적에게 당했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, teemo);
+   	printf("적을 처치했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, ashe);
+   	printf("적을 처치했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, soraka);
+   	printf("더블킬                     메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, lillia);
+   	printf("트리플킬                   메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, teemo);
+   	printf("도저히 막을 수 없습니다    메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	push(&s, ashe);
+   	printf("더블킬                     메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	push(&s, soraka);
+   	printf("트리플킬                   메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	push(&s, lillia);
+   	printf("쿼드라킬                   메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai = s.top / 2;
+   	printf("적에게 당했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   
+   	mejai++;
+   	push(&s, kassadin);
+   	printf("적을 처치했습니다          메사이의 영혼약탈자 %d 스택 \n", mejai);
+   }
+   ```
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+   
 
-Jekyll also offers powerful support for code snippets:
+2. **실행결과**
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+![](https://user-images.githubusercontent.com/62733730/93905593-1922e500-fd36-11ea-9a07-5a21be4d753c.png)
